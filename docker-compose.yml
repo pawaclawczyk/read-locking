@@ -1,0 +1,13 @@
+version: '2'
+services:
+  app:
+    volumes:
+      - .:/app
+    image: "php:5.6"
+    entrypoint:
+      - /app/src/bin/nop.sh
+  db:
+    image: mysql:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=test

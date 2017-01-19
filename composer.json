@@ -1,0 +1,7 @@
+{
+    "require": {
+        "doctrine/dbal": "^2.5",
+        "symfony/process": "^3.2",
+        "nesbot/carbon": "^1.22"
+    }
+}
