@@ -6,9 +6,9 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 use Symfony\Component\Process\Process;
 
-$p1 = new Process('php lock_and_sleep.php 127.0.0.2 ');
-$p2 = new Process('php lock_and_sleep.php 127.0.0.2 ');
-$p3 = new Process('php lock_and_sleep.php 127.0.0.2 ');
+$p1 = new Process('php select_for_update.php 2');
+$p2 = new Process('php select_for_update.php 3');
+$p3 = new Process('php select_for_update.php 5');
 
 $p1->start();
 $p2->start();
